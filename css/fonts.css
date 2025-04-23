@@ -1,0 +1,54 @@
+@font-face {
+    font-family: "Libre Baskerville";
+    src: url("../fonts/Libre_Baskerville_Bold.woff2") format("woff2"), url("fonts/Libre_Baskerville_Bold.woff") format("woff");
+    /* Schriftschnitte zuweisen */
+    /* 400 = normal */
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Lora";
+    src: url("../fonts/Lora_Italic.woff2") format("woff2"), url("../fonts/Lora_Italic.woff") format("woff");
+
+    font-weight: normal;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Hind Madurai";
+    src: url("../fonts/Hind_Madurai_Regular.woff2") format("woff2"), url("../fonts/Hind_Madurai_Regular.woff") format("woff");
+
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Hind Madurai";
+    src: url("../fonts/Hind_Madurai_Light.woff2") format("woff2"), url("../fonts/Hind_Madurai_Light.woff") format("woff");
+
+    font-weight: 200;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Hind Madurai";
+    src: url("../fonts/Hind_Madurai_Bold.woff2") format("woff2"), url("../fonts/Hind_Madurai_SemiBold.woff") format("woff");
+
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Hind Madurai";
+    src: url("../fonts/Hind_Madurai_Medium.woff2") format("woff2"), url("../fonts/Hind_Madurai_Medium.woff") format("woff");
+
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
