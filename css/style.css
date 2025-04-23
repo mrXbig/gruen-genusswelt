@@ -1,162 +1,266 @@
-*,
-*::before,
-*::after {
-    box-sizing: border-box;
+/* navigation */
+nav ul {
+    list-style-type: none;
     margin: 0;
-    scroll-behavior: smooth;
+    padding: 0;
 }
 
-/* Schriften */
-html {
-    font-family: var(--body-text);
-    /* Prozentsätze sind in den User-Präferenzen überschreibbar */
-    font-size: 125%;
-    line-height: 1.5;
-    color: var(--dark);
+nav li {
+    padding: 0 1rem;
 }
 
-h1 {
-    font-size: 3.375rem;
+nav {
+    justify-content: space-between;
+    align-items: center;
+    height: 10vh;
+    margin: 0;
 }
 
-h2 {
-    font-family: 2.25rem;
-    padding-bottom: 0.7rem;
+.icons {
+    gap: 0.8rem;
 }
 
-h3 {
-    font-family: var(--subheadings);
-    font-size: 1.5rem;
-    font-style: var(--fs-italic);
-    font-weight: var(--fw-regular);
+/* Hero */
+.hero {
+    background: url("../img/gruene-genusswelt-hero.jpg") no-repeat;
+    height: 90vh;
+    background-size: cover;
+    background-position: center;
+    align-items: center;
 }
 
-h4 {
-    font-size: 1rem;
-    font-weight: var(--fw-bold);
-    padding-top: 1rem;
-}
-
-h1,
-h2,
-h4 {
-    font-family: var(--display-text);
-}
-
-h1,
-h2,
-h3 {
-    line-height: 1.2;
-}
-
-/* Abstände */
-/* Vertikal */
-.py-1 {
-    padding-top: var(--p-1);
-    padding-bottom: var(--p-1);
-}
-
-.py-2 {
-    padding-top: var(--p-2);
-    padding-bottom: var(--p-2);
-}
-
-.py-3 {
-    padding-top: var(--p-3);
-    padding-bottom: var(--p-3);
-}
-
-.py-4 {
-    padding-top: var(--p-4);
-    padding-bottom: var(--p-4);
-}
-
-/* Horizontal */
-.px-1 {
-    padding-left: var(--p-1);
-    padding-right: var(--p-1);
-}
-
-.px-2 {
-    padding-left: var(--p-2);
-    padding-right: var(--p-2);
-}
-
-.px-3 {
-    padding-left: var(--p-3);
-    padding-right: var(--p-3);
-}
-
-.px-4 {
-    padding-left: var(--p-4);
-    padding-right: var(--p-4);
-}
-
-/* Bilder responsive */
-img {
-    max-width: 100%;
+.cta {
+    background-color: var(--base);
+    width: 50%;
+    max-width: 800px;
     height: auto;
+    flex-direction: column;
+    gap: 1.8rem;
+    margin-left: 10%;
 }
 
-/* Schriftformatierung */
-.text-align-center {
-    text-align: center;
+.buttons-container {
+    gap: 0.8rem;
 }
 
-/* Flex */
-.flex {
-    display: flex;
-}
-
-.align-center {
+/* Neue Rezepte */
+.neue-rezepte {
+    flex-direction: column;
+    gap: 1rem;
     align-items: center;
 }
 
-.justify-center {
-    justify-content: center;
+.card-container {
+    width: 75%;
+    /* auto-fit = Spaltenanzahl wird automatisch berechnet, minmax() = mindest Wert & Maximaler Wert für die Spaltenbreite */
+    grid-template-columns: repeat(auto-fit, minmax(272px, 1fr));
+    gap: 2rem;
 }
 
-/* Grid */
-.grid {
-    display: grid;
-}
-
-/* Links */
-a {
-    color: var(--dark);
-    text-decoration: none;
-    font-weight: 600;
-}
-
-/* Buttons */
-.button {
-    padding: 0.8rem 1.8rem;
-    border: none;
-    text-align: center;
+.card {
+    border: 1px solid var(--light);
+    box-shadow: 8px 8px 24px #E0E0E0;
+    padding: 0.8rem;
     display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 0.4rem;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: start;
+    gap: 1.2rem;
 }
 
-.btn-primary {
-    background-color: var(--primary);
+/* About Section */
+.about {
+    gap: 3.2rem;
+    flex-wrap: wrap;
+    background-color: var(--base);
+    align-items: center;
+    justify-content: center;
+}
+
+.about>div {
+    flex: 0 1 497px;
+}
+
+.about-text {
+    text-wrap: pretty;
+}
+
+/* Newsletter */
+input,
+select,
+textarea,
+button {
+    font-family: inherit;
+    font-size: 100%;
+}
+
+.newsletter {
+    flex-direction: column;
+    gap: 2rem;
+    align-items: center;
+}
+
+.newsletter-form {
+    flex-direction: column;
+    gap: 1.2rem;
+}
+
+.checkboxes {
+    gap: 1.2rem;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.checkbox-1,
+.checkbox-2 {
+    gap: 0.8rem;
+    accent-color: grey;
+}
+
+.anmelden {
+    gap: 0.8rem;
+    align-items: end;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.email {
+    flex-direction: column;
+    text-align: left;
+}
+
+.anmelden input[type="email"] {
+    width: 24rem;
+    height: 2.4rem;
+}
+
+.anmelden button {
+    height: 2.4rem;
+    line-height: 0;
+}
+
+/* focus & active states */
+input[type="email"]:focus {
+    border: 1px solid white;
+    outline: 3px solid var(--primary);
+}
+
+/* Footer */
+footer {
+    background-color: var(--dark);
+    color: white;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+footer i,
+footer a {
     color: var(--light);
 }
 
-.btn-secondary {
-    background-color: var(--secondary);
+i {
+    font-size: 1.2rem;
 }
 
-a:hover,
-button:hover {
-    filter: brightness(80%);
-    text-decoration: underline;
+.social-icons {
+    gap: 1.2rem;
 }
 
+/* Overlay */
+.overlay {
+    height: 100vh;
+    width: 50%;
+    background-color: white;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.overlay-content ul {
+    flex-direction: column;
+    gap: 1rem;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.closebtn {
+    font-size: 1.2rem;
+}
+
+.hamburger {
+    display: none;
+}
+
+.display-none {
+    display: none;
+}
+
+.display-block {
+    display: block;
+}
+
+/* Media Queries */
+/* Tablet */
 @media screen and (width<=992px) {
-    html {
-        font-size: 100%;
+    .cta {
+        margin: 0 auto;
+        text-align: center;
+        width: 75%;
+        align-items: center;
     }
 
+    .buttons-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .buttons-container a {
+        width: 14rem;
+    }
+}
+
+/* Smartphone */
+@media screen and (width<=576px) {
+
+    nav .icons,
+    nav a {
+        display: none;
+    }
+
+    .hamburger {
+        display: block;
+    }
+
+    .hamburger i {
+        font-size: 2rem;
+    }
+
+    .hero {
+        align-items: flex-end;
+    }
+
+    .cta {
+        width: 100%;
+        background-color: #FFF3E399;
+    }
+
+    /* Neue Rezepte */
+    .card-container {
+        width: 90%;
+    }
+
+    .card {
+        text-align: center;
+        align-items: center;
+    }
+
+    /* Newsletter */
+    .anmelden input[type="email"] {
+        width: 100%;
+    }
+
+    .email {
+        width: 100%;
+    }
 }

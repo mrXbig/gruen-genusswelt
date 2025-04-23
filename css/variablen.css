@@ -10,9 +10,9 @@
     /* regular */
     /* fw = font-weight */
     --fw-regular: 400;
-    /* Bold */
+    /* bold */
     --fw-bold: 700;
-    /* Kusiv */
+    /* kursiv */
     --fs-italic: italic;
     /* padding */
     --p-1: 1rem;
